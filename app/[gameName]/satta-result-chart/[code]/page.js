@@ -106,7 +106,7 @@ export default function GameChartPage() {
             <div className="brand-icon" aria-hidden="true">♚</div>
             <div>
               <Link href="/" style={{ textDecoration: 'none' }}>
-                <div className="brand-name">SATTA KING FAST</div>
+                <div className="brand-name">SATTA KING MAX</div>
                 <div className="brand-sub">SUPERFAST LIVE RESULTS &amp; CHARTS</div>
               </Link>
             </div>

@@ -105,7 +105,7 @@ export default function HomePage() {
           <div className="brand">
             <div className="brand-icon" aria-hidden="true">♚</div>
             <div>
-              <div className="brand-name">SATTA KING FAST</div>
+              <div className="brand-name">SATTA KING MAX</div>
               <div className="brand-sub">SUPERFAST LIVE RESULTS &amp; CHARTS</div>
             </div>
           </div>
