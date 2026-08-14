@@ -93,12 +93,17 @@ a:hover {
   font-size: 13px;
   font-weight: 800;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
-  transition: transform 0.2s ease;
+  transition: all 0.28s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .btn-wa-festive:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px) scale(1.04);
   background: var(--wa-light);
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.5), 0 0 0 2px var(--gold);
+}
+
+.btn-wa-festive:active {
+  transform: translateY(-1px) scale(0.97);
 }
 
 .wa-royal-banner {
@@ -139,7 +144,7 @@ a:hover {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 12px 22px;
+  padding: 12px 24px;
   background: linear-gradient(135deg, var(--wa-light), var(--wa));
   border: 2px solid var(--gold-2);
   border-radius: 999px;
@@ -149,8 +154,14 @@ a:hover {
   font-weight: 800;
   cursor: pointer;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-  animation: pulseWa 2s infinite;
+  animation: pulseWa 2s infinite, festiveFabSlide 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) both;
   text-decoration: none;
+  transition: transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes festiveFabSlide {
+  from { transform: translateY(20px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
 }
 
 @keyframes pulseWa {
@@ -285,7 +296,7 @@ a:hover {
   color: var(--cream);
   font-size: 13px;
   font-weight: 700;
-  transition: all 0.2s ease;
+  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .links a:hover,
@@ -293,6 +304,8 @@ a:hover {
   background: var(--gold);
   border-color: var(--gold);
   color: var(--maroon-2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(217, 164, 65, 0.4);
 }
 
 /* ── Royal Masthead with Rotating Mandala ───────────────── */
@@ -497,11 +510,16 @@ a:hover {
   padding: 3px;
   background: linear-gradient(135deg, var(--gold), rgba(217, 164, 65, 0.3), var(--gold));
   border-radius: 12px;
-  transition: transform 0.25s ease;
+  transition: all 0.32s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-5px) scale(1.01);
+  box-shadow: 0 0 22px rgba(217, 164, 65, 0.4), 0 12px 28px rgba(0,0,0,0.5);
+}
+
+.card:active {
+  transform: translateY(-2px) scale(0.99);
 }
 
 .card-in {
@@ -583,11 +601,18 @@ a:hover {
   font-weight: 800;
   letter-spacing: 0.5px;
   text-transform: uppercase;
+  transition: all 0.22s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .clink:hover {
   background: var(--gold);
   color: var(--maroon-2);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(217, 164, 65, 0.4);
+}
+
+.clink:active {
+  transform: translateY(0) scale(0.97);
 }
 
 /* ── Royal Archive Table ────────────────────────────────── */
@@ -634,6 +659,12 @@ a:hover {
   color: #ffffff;
 }
 
+.royal-table tr.today-row td:first-child {
+  border-left: 3px solid var(--gold);
+  font-weight: 900;
+  color: var(--gold-2);
+}
+
 .royal-nav-btns {
   display: flex;
   justify-content: center;
@@ -652,13 +683,19 @@ a:hover {
   font-size: 13px;
   font-weight: 700;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.28s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .royal-btn:hover,
 .royal-btn.active {
   background: var(--gold);
   color: var(--maroon-2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(217, 164, 65, 0.45);
+}
+
+.royal-btn:active {
+  transform: translateY(0) scale(0.97);
 }
 
 /* ── Royal Footer ───────────────────────────────────────── */
@@ -692,7 +729,7 @@ a:hover {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 12px 22px;
+  padding: 12px 24px;
   background: linear-gradient(135deg, var(--gold), #c2410c);
   border: 2px solid var(--gold-2);
   border-radius: 999px;
@@ -701,9 +738,17 @@ a:hover {
   font-size: 14px;
   font-weight: 800;
   cursor: pointer;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 20px rgba(217, 164, 65, 0.4);
+  animation: festiveFabSlide 0.75s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  transition: all 0.28s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .festive-fab:hover {
   background: var(--gold-2);
+  transform: translateY(-3px) scale(1.04);
+  box-shadow: 0 8px 24px rgba(217, 164, 65, 0.6);
+}
+
+.festive-fab:active {
+  transform: translateY(-1px) scale(0.97);
 }
